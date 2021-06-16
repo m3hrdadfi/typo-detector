@@ -27,7 +27,7 @@ You use this model with Transformers pipeline for NER (token-classification).
 pip install transformers
 ```
 
-### How to predict using pipeline
+### Prediction using pipeline
 
 ```python
 import torch
