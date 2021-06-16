@@ -35,7 +35,7 @@ from transformers import AutoConfig, AutoTokenizer, AutoModelForTokenClassificat
 from transformers import pipeline
 
 
-model_name_or_path = "mehrdadfi/typo-detector-distilbert-en"
+model_name_or_path = "m3hrdadfi/typo-detector-distilbert-en"
 config = AutoConfig.from_pretrained(model_name_or_path)
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
 model = AutoModelForTokenClassification.from_pretrained(model_name_or_path, config=config)
