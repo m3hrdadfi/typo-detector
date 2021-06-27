@@ -97,7 +97,8 @@ model = AutoModelForTokenClassification.from_pretrained(model_name_or_path, conf
 nlp = pipeline('token-classification', model=model, tokenizer=tokenizer, aggregation_strategy="average")
 ```
 
-**For English:**
+#### English
+
 ```python
 sentences = [
  "He had also stgruggled with addiction during his time in Congress .",
@@ -138,7 +139,8 @@ Output:
 ----------------------------------------------------------------------------------------------------------------------------------
 ```
 
-**For Icelandic:**
+#### Icelandic
+
 ```python
 sentences = [
 "Páli, vini mínum, langaði að horfa á sjónnvarpið.",
@@ -183,7 +185,8 @@ Output:
 ----------------------------------------------------------------------------------------------------------------------------------
 ```
 
-**For Persian:**
+#### Persian
+
 ```python
 sentences = [
     'و گلوله دور مقابکل غلم " بود .',
