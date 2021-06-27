@@ -53,12 +53,12 @@ The following tables summarize the scores obtained by model overall and per each
  
 </div>
 
-## Dataset Information
+### Dataset Information
 
 I made synthetic data for this specific task.
 
 
-## Evaluation
+### Evaluation
 
 The following tables summarize the scores obtained by model overall and per each class.
 
