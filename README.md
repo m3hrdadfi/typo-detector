@@ -96,6 +96,7 @@ from transformers import pipeline
 
 
 model_name_or_path = "m3hrdadfi/typo-detector-distilbert-en"
+# model_name_or_path = "m3hrdadfi/typo-detector-distilbert-is"
 # model_name_or_path = "m3hrdadfi/typo-detector-distilbert-fa"
 config = AutoConfig.from_pretrained(model_name_or_path)
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
