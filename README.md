@@ -4,6 +4,8 @@
 
 ## English Version
 
+Model: [m3hrdadfi/typo-detector-distilbert-en](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-en)
+
 ### Dataset Information
 
 For this specific task, I used [NeuSpell](https://github.com/neuspell/neuspell) dataset as my raw-data.
@@ -21,6 +23,8 @@ The following tables summarize the scores obtained by model overall and per each
 
 
 ## Icelandic Version
+
+Model: [m3hrdadfi/typo-detector-distilbert-is](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-is)
 
 ### Dataset Information
 Synthetic data for this specific task.
@@ -50,6 +54,8 @@ The following tables summarize the scores obtained by model overall and per each
 پس از خریداری لایسنس بر حسب اطلاعات وارد شده با شما تماس خواهیم گرفت، جهت تنظیم وقت پشتیبانی آنلاین جهت هماهنگی مدل متناسب با نوع کسب‌و‌کار شما.
  
  **لازم به ذکر است بهبود و ارتقا مدل جز در موارد خریداری شده لایسنس (شخصی، استارتاپی، شرکتی و سازمانی) و متناسب با همان زمینه مجاز می‌باشد. شما نمی‌توانید مدل را بهبود داده و از آن به هر طریقی درآمدزایی کنید.**
+
+مدل: [m3hrdadfi/typo-detector-distilbert-fa](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-fa)
  
 </div>
 
