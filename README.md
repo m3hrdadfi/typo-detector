@@ -20,6 +20,24 @@ The following tables summarize the scores obtained by model overall and per each
 | weighted avg |  0.992332 | 0.985997 | 0.989154 | 416054.0 |
 
 
+## Icelandic Version
+
+### Dataset Information
+Synthetic data for this specific task.
+
+
+### Evaluation
+
+The following tables summarize the scores obtained by model overall and per each class.
+
+|       #      | precision |  recall  | f1-score | support |
+|:------------:|:---------:|:--------:|:--------:|:-------:|
+|     TYPO     |  0.98954  | 0.967603 | 0.978448 | 43800.0 |
+|   micro avg  |  0.98954  | 0.967603 | 0.978448 | 43800.0 |
+|   macro avg  |  0.98954  | 0.967603 | 0.978448 | 43800.0 |
+| weighted avg |  0.98954  | 0.967603 | 0.978448 | 43800.0 |
+
+
 ## Persian Version
 
 <div dir="rtl">
@@ -37,7 +55,7 @@ The following tables summarize the scores obtained by model overall and per each
 
 ## Dataset Information
 
-I made a synthetic data for this specific task.
+I made synthetic data for this specific task.
 
 
 ## Evaluation
@@ -117,6 +135,51 @@ Output:
 ----------------------------------------------------------------------------------------------------------------------------------
    [Input]:  It is left to the directors to figure out hpw to bring the stry across to tye audience .
 [Detected]:  It is left to the directors to figure out <i>hpw</i> to bring the <i>stry</i> across to <i>tye</i> audience .
+----------------------------------------------------------------------------------------------------------------------------------
+```
+
+**For Icelandic:**
+```python
+sentences = [
+"Páli, vini mínum, langaði að horfa á sjónnvarpið.",
+"Leggir þciðursins eru þaktir fjöðrum til bað edravn fuglnn gekgn kuldanué .",
+"Þar hitta þeir konu Björns og segir ovs :",
+"Ingvar Sæmundsson ekgk rú sveitinni árið 2015 og etnbeitii sér að hinni þungarokkssvedt svnni Momentum .",
+"Þar hitta þeir konu Björns og segir ovs :",
+"Var hann síðaún hkluti af leikhópnum sem ferðaðist um Bandaríkin til að sýan söngleikinn ."
+]
+
+for sentence in sentences:
+    typos = [sentence[r["start"]: r["end"]] for r in nlp(sentence)]
+
+    detected = sentence
+    for typo in typos:
+        detected = detected.replace(typo, f'<i>{typo}</i>')
+
+    print("   [Input]: ", sentence)
+    print("[Detected]: ", detected)
+    print("-" * 130)
+```
+
+Output:
+```text
+   [Input]:  Páli, vini mínum, langaði að horfa á sjónnvarpið.
+[Detected]:  Páli, vini mínum, langaði að horfa á <i>sjónnvarpið</i>.
+----------------------------------------------------------------------------------------------------------------------------------
+   [Input]:  Leggir þciðursins eru þaktir fjöðrum til bað edravn fuglnn gekgn kuldanué .
+[Detected]:  Leggir <i>þciðursins</i> eru þaktir fjöðrum til <i>bað</i> <i>edravn</i> <i>fuglnn</i> <i>gekgn</i> <i>kuldanué</i> .
+----------------------------------------------------------------------------------------------------------------------------------
+   [Input]:  Þar hitta þeir konu Björns og segir ovs :
+[Detected]:  Þar hitta þeir konu Björns og segir <i>ovs</i> :
+----------------------------------------------------------------------------------------------------------------------------------
+   [Input]:  Ingvar Sæmundsson ekgk rú sveitinni árið 2015 og etnbeitii sér að hinni þungarokkssvedt svnni Momentum .
+[Detected]:  Ingvar Sæmundsson <i>ekgk</i> <i>rú</i> sveitinni árið 2015 og <i>etnbeitii</i> sér að hinni <i>þungarokkssvedt</i> <i>svnni</i> Momentum .
+----------------------------------------------------------------------------------------------------------------------------------
+   [Input]:  Þar hitta þeir konu Björns og segir ovs :
+[Detected]:  Þar hitta þeir konu Björns og segir <i>ovs</i> :
+----------------------------------------------------------------------------------------------------------------------------------
+   [Input]:  Var hann síðaún hkluti af leikhópnum sem ferðaðist um Bandaríkin til að sýan söngleikinn .
+[Detected]:  Var hann <i>síðaún</i> <i>hkluti</i> af leikhópnum sem ferðaðist um Bandaríkin til að <i>sýan</i> söngleikinn .
 ----------------------------------------------------------------------------------------------------------------------------------
 ```
 
