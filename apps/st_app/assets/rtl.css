@@ -1,0 +1,14 @@
+.rtl,
+textarea {
+    font-family: Vazir !important;
+    text-align: right;
+    direction: rtl !important;
+}
+.rtl-box {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.ltr {
+    text-align: left;
+    direction: ltr !important;
+}

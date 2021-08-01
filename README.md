@@ -1,4 +1,4 @@
-<h1 align="center">Typo Detector using Transformers 🦁</h1>
+<h1 align="center">Typo Detector using Transformers ⚡</h1>
 <br/>
 
 
