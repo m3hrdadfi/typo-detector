@@ -1,8 +1,8 @@
 import streamlit as st
 
 import torch
-from transformers import pipeline, set_seed
-from transformers import AutoTokenizer
+from transformers import pipeline
+from transformers import AutoConfig, AutoTokenizer, AutoModelForTokenClassification
 
 from libs.normalizer import Normalizer
 from libs.examples import LANGUAGES, EXAMPLES
@@ -29,13 +29,22 @@ class TypoDetector:
         self.task_name = "token-classification"
 
         self.tokenizer = None
+        self.config = None
+        self.model = None
         self.nlp = None
         self.normalizer = None
 
     def load(self):
         if not self.debug:
+            self.config = AutoConfig.from_pretrained(self.model_name_or_path)
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name_or_path)
-            self.nlp = pipeline(self.task_name, model=self.model_name_or_path, tokenizer=self.model_name_or_path)
+            self.model = AutoModelForTokenClassification.from_pretrained(self.model_name_or_path, config=config)
+            self.nlp = pipeline(
+                self.task_name,
+                model=self.model,
+                tokenizer=self.tokenizer,
+                aggregation_strategy="average"
+            )
 
         self.normalizer = Normalizer()
 
