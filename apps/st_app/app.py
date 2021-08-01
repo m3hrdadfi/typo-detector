@@ -38,7 +38,7 @@ class TypoDetector:
         if not self.debug:
             self.config = AutoConfig.from_pretrained(self.model_name_or_path)
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name_or_path)
-            self.model = AutoModelForTokenClassification.from_pretrained(self.model_name_or_path, config=config)
+            self.model = AutoModelForTokenClassification.from_pretrained(self.model_name_or_path, config=self.config)
             self.nlp = pipeline(
                 self.task_name,
                 model=self.model,
