@@ -23,7 +23,7 @@ class TypoDetector:
             self,
             model_name_or_path: str = "m3hrdadfi/typo-detector-distilbert-en"
     ) -> None:
-        self.debug = False
+        self.debug = True
         self.dummy_outputs = dummy_outputs
         self.model_name_or_path = model_name_or_path
         self.task_name = "token-classification"
