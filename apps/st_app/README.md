@@ -1,11 +1,11 @@
 ---
 title: Typo Detector
 emoji: ⚡
-colorFrom: red
-colorTo: red
+colorFrom: blue
+colorTo: blue
 sdk: streamlit
 app_file: app.py
-pinned: false
+pinned: true
 ---
 
 # Typo Detector using Transformers
