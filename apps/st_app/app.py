@@ -66,11 +66,12 @@ def load_typo_detectors():
     en_detector = TypoDetector(MODELS["English (en)"])
     en_detector.load()
 
+    is_detector = TypoDetector(MODELS["Icelandic (is)"])
+    is_detector.load()
+
     fa_detector = TypoDetector(MODELS["Persian (fa)"])
     fa_detector.load()
 
-    is_detector = TypoDetector(MODELS["Icelandic (is)"])
-    is_detector.load()
     return {
         "en": en_detector,
         "fa": fa_detector,
