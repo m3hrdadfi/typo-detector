@@ -1,5 +1,5 @@
 import streamlit as st
-
+import os
 import torch
 from transformers import pipeline
 from transformers import AutoConfig, AutoTokenizer, AutoModelForTokenClassification
@@ -16,6 +16,7 @@ MODELS = {
     "Persian (fa)": "m3hrdadfi/typo-detector-distilbert-fa",
     "Icelandic (is)": "m3hrdadfi/typo-detector-distilbert-is",
 }
+API_TOKEN = os.environ.get("API_TOKEN")
 
 
 class TypoDetector:
@@ -34,11 +35,15 @@ class TypoDetector:
         self.nlp = None
         self.normalizer = None
 
-    def load(self):
+    def load(self, api_token=None):
+        api_token = api_token if api_token else False
         if not self.debug:
-            self.config = AutoConfig.from_pretrained(self.model_name_or_path)
-            self.tokenizer = AutoTokenizer.from_pretrained(self.model_name_or_path)
-            self.model = AutoModelForTokenClassification.from_pretrained(self.model_name_or_path, config=self.config)
+            self.config = AutoConfig.from_pretrained(self.model_name_or_path, use_auth_token=api_token)
+            self.tokenizer = AutoTokenizer.from_pretrained(self.model_name_or_path, use_auth_token=api_token)
+            self.model = AutoModelForTokenClassification.from_pretrained(
+                self.model_name_or_path,
+                config=self.config,
+                use_auth_token=api_token)
             self.nlp = pipeline(
                 self.task_name,
                 model=self.model,
@@ -70,7 +75,7 @@ def load_typo_detectors():
     is_detector.load()
 
     fa_detector = TypoDetector(MODELS["Persian (fa)"])
-    fa_detector.load()
+    fa_detector.load(api_token=API_TOKEN)
 
     return {
         "en": en_detector,
