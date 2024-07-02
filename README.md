@@ -2,80 +2,14 @@
 <br/>
 
 
-## English Version
+## Supported Languages:
 
-Model: [m3hrdadfi/typo-detector-distilbert-en](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-en)
+- English: [m3hrdadfi/typo-detector-distilbert-en](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-en)
+- Icelandic: [m3hrdadfi/typo-detector-distilbert-is](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-is)
+- Persian: [m3hrdadfi/typo-detector-distilbert-fa](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-fa)
 
-### Dataset Information
-
-For this specific task, I used [NeuSpell](https://github.com/neuspell/neuspell) dataset as my raw-data.
-
-### Evaluation
-
-The following tables summarize the scores obtained by model overall and per each class.
-
-|       #      | precision |  recall  | f1-score |  support |
-|:------------:|:---------:|:--------:|:--------:|:--------:|
-|     TYPO     |  0.992332 | 0.985997 | 0.989154 | 416054.0 |
-|   micro avg  |  0.992332 | 0.985997 | 0.989154 | 416054.0 |
-|   macro avg  |  0.992332 | 0.985997 | 0.989154 | 416054.0 |
-| weighted avg |  0.992332 | 0.985997 | 0.989154 | 416054.0 |
-
-
-## Icelandic Version
-
-Model: [m3hrdadfi/typo-detector-distilbert-is](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-is)
-
-### Dataset Information
+## Dataset Information
 Synthetic data for this specific task.
-
-
-### Evaluation
-
-The following tables summarize the scores obtained by model overall and per each class.
-
-|       #      | precision |  recall  | f1-score | support |
-|:------------:|:---------:|:--------:|:--------:|:-------:|
-|     TYPO     |  0.98954  | 0.967603 | 0.978448 | 43800.0 |
-|   micro avg  |  0.98954  | 0.967603 | 0.978448 | 43800.0 |
-|   macro avg  |  0.98954  | 0.967603 | 0.978448 | 43800.0 |
-| weighted avg |  0.98954  | 0.967603 | 0.978448 | 43800.0 |
-
-
-## Persian Version
-
-<div dir="rtl">
-تشخیص‌دهنده خطا‌های املایی، حاصل آموزش مدل بیش از ۱۰۰ ساعت بر روی بیش از ۲ میلیون دیتا است. این مدل برای استفاده تحقیقاتی و مقالات به صورت آزاد در اختیار محققین قرار خواهد گرفت همچنین برای تست و استفاده به صورت آزاد در هاگینگ‌فیس قابل مشاهده خواهد بود. ولی لازم به ذکر است که استفاده از مدل برای مصارف شخصی، استارتاپی، شرکتی و سازمانی و حتی بهبود مدل و فروش آن منطقا و حقیقتا جایز نیست ولی شما میتوانید بسته به استفاده شخصی و یا ابعاد مدل کسب و کار خودتان لایسنس این مدل را خریداری کنید. این لایسنس شامل استفاده از مدل، تونینگ مدل و دیپلوی مدل خواهد بود.
-
-- [استفاده شخصی](https://zarinp.al/377906)
-- [استفاده جهت استارتاپ‌ها](https://zarinp.al/377907)
-- [استفاده جهت شرکت‌ها و سازمان‌ها](https://zarinp.al/377908)
- 
-پس از خریداری لایسنس بر حسب اطلاعات وارد شده با شما تماس خواهیم گرفت، جهت تنظیم وقت پشتیبانی آنلاین جهت هماهنگی مدل متناسب با نوع کسب‌و‌کار شما.
- 
- **لازم به ذکر است بهبود و ارتقا مدل جز در موارد خریداری شده لایسنس (شخصی، استارتاپی، شرکتی و سازمانی) و متناسب با همان زمینه مجاز می‌باشد. شما نمی‌توانید مدل را بهبود داده و از آن به هر طریقی درآمدزایی کنید.**
-
-مدل: [m3hrdadfi/typo-detector-distilbert-fa](https://huggingface.co/m3hrdadfi/typo-detector-distilbert-fa)
- 
-</div>
-
-### Dataset Information
-
-I made synthetic data for this specific task.
-
-
-### Evaluation
-
-The following tables summarize the scores obtained by model overall and per each class.
-
-|       #      | precision |  recall  | f1-score |  support |
-|:------------:|:---------:|:--------:|:--------:|:--------:|
-|     TYPO     |  0.984098 | 0.984047 | 0.984073 | 307088.0 |
-|   micro avg  |  0.984098 | 0.984047 | 0.984073 | 307088.0 |
-|   macro avg  |  0.984098 | 0.984047 | 0.984073 | 307088.0 |
-| weighted avg |  0.984098 | 0.984047 | 0.984073 | 307088.0 |
-
-
 
 ## How to use
 
